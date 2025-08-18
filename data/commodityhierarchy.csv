@@ -1,0 +1,126 @@
+﻿sitc_code,label,initial
+T,Total,T
+0,Food & live animals,0
+00,Live animals,0
+01,Meat & meat preparations,0
+02,Dairy products & eggs,0
+03,Fish & shellfish,0
+04,Cereals,0
+08,Animal feeding stuffs,0
+05,Vegetables & fruit,0
+06,Sugar,0
+07,"Coffee, tea, cocoa etc",0
+09,Miscellaneous foods,0
+1,Beverages & tobacco,1
+11,Beverages,1
+12,Tobacco,1
+2,Crude materials,2
+24,Wood & cork,2
+25,Pulp & waste paper,2
+26,Textile fibres,2
+28,Metal ores & scrap,2
+21,"Hides, skins & furskins",2
+22,Oil-seeds & oleaginous fruits,2
+23,Crude rubber,2
+27,Crude minerals & fertilisers,2
+29,Other crude animal & vegetable materials,2
+4,Animal & vegetable oils & fats,4
+41,Animal oils & fats,4
+42,Vegetable oils & fats,4
+43,Processed oils & fats,4
+3,Fuels,3
+33,Oil,3
+33O,Crude oil,3
+33R,Refined oil,3
+3OF,Fuels other than oil,3
+32,"Coal, coke & briquettes",3
+34,Gas,3
+35,Electricity,3
+5,Chemicals,5
+51,Organic chemicals,5
+52,Inorganic chemicals,5
+53,"Dyeing, tanning & colouring materials",5
+54,Medicinal & pharmaceutical products,5
+55,Toilet & cleansing preparations,5
+57,Plastics in primary forms,5
+58,Plastics in non-primary forms,5
+56,Processed fertilisers,5
+59,Other chemicals,5
+6,Material manufactures,6
+61,Leather manufactures,6
+62,Rubber manufactures,6
+63,Wood & cork manufactures,6
+64,Paper & paperboard,6
+65,Textile fabrics,6
+66,Mineral manufactures,6
+67,Iron & steel,6
+68,Non-ferrous metals,6
+69,Miscellaneous metal manufactures,6
+7,Machinery & transport equipment,7
+7M,Mechanical machinery,7
+7MC,Mechanical machinery (consumer),7
+71MC,Mechanical power generators (consumer),7
+72C,Specialised machinery (consumer),7
+74C,General industrial machinery (consumer),7
+7MI,Mechanical machinery (intermediate),7
+71MI,Mechanical power generators (intermediate),7
+72I,Specialised machinery (intermediate),7
+73I,Metal working machinery (intermediate),7
+74I,General industrial machinery (intermediate),7
+7MK,Mechanical machinery (capital),7
+71MK,Mechanical power generators (capital),7
+72K,Specialised machinery (capital),7
+73K,Metal working machinery (capital),7
+74K,General industrial machinery (capital),7
+7E,Electrical machinery,7
+7EC,Electrical machinery (consumer),7
+75C,Office machinery (consumer),7
+76C,Telecoms & sound equipment (consumer),7
+77C,Miscellaneous electrical goods (consumer),7
+7EI,Electrical machinery (intermediate),7
+71EI,Electric motors (intermediate),7
+75I,Office machinery (intermediate),7
+76I,Telecoms & sound equipment (intermediate),7
+77I,Miscellaneous electrical goods (intermediate),7
+7EK,Electrical machinery (intermediate),7
+71EK,Electric motors (capital),7
+75K,Office machinery (capital),7
+76K,Telecoms & sound equipment (capital),7
+77K,Miscellaneous electrical goods (capital),7
+78,Road vehicles,7
+78M,Cars,7
+78C,Road vehicles other than cars (consumer),7
+78I,Road vehicles other than cars (intermediate),7
+78K,Road vehicles other than cars (capital),7
+79,Other transport equipment,7
+791I,Railway equipment (intermediate),7
+791K,Railway equipment (capital),7
+792/3,Ships & aircraft,7
+792,Aircraft,7
+793,Ships,7
+8,Miscellaneous manufactures,8
+84,Clothing,8
+85,Footwear,8
+87C,Scientific instruments (consumer),8
+88C,Photographic & optical goods & clocks (consumer),8
+87I,Scientific instruments (intermediate),8
+88I,Photographic & optical goods & clocks (intermediate),8
+87K,Scientific instruments (capital),8
+88K,Photographic & optical goods & clocks (capital),8
+8O,Other manufactures,8
+896,Works of art,8
+897C,Jewellery,8
+8OC,Other miscellaneous manufactures (consumer),8
+81C,"Plumbing, heating & lighting fixtures (consumer)",8
+82C,Furniture (consumer),8
+83,"Travel goods, handbags etc",8
+89OC,Other manufactures (consumer),8
+8OI,Other miscellaneous manufactures (intermediate),8
+81I,"Plumbing, heating & lighting fixtures (intermediate)",8
+82I,Furniture (intermediate),8
+89I,Other manufactures (intermediate),8
+8OK,Other miscellaneous manufactures (capital),8
+81K,"Plumbing, heating & lighting fixtures (capital)",8
+82K,Furniture (capital),8
+89K,Other manufactures (capital),8
+9,Unspecified goods,9
