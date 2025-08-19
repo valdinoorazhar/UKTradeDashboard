@@ -1,16 +1,11 @@
-from tzlocal import get_localzone
 import clickhouse_connect
 import requests
 import json
-import csv
 import pandas as pd
-from io import BytesIO
+from datetime import datetime
 
+# Initialize ClickHouse client
 client = clickhouse_connect.get_client(host='localhost', port=18123, username='default', password='changeme', database='STG_ONS')
-'''query_result = client.query('SELECT * FROM STG_ONS.fact_commodity')
-query_result_df = query_result.result_rows
-print(query_result_df)'''
-
 
 
 #Get ONS Trade Data API
@@ -33,31 +28,18 @@ text_OBS = response_OBS.text
 #print(obs)
 json_OBS = json.loads(text_OBS)
 
-#data = []
+data = []
 
-'''
-observations = json_OBS.get("observations", [])
-if isinstance(observations, list):
-    for i in range(len(json_OBS["observations"])):
-        row = []
-        country_i = json_OBS["observations"][i]["dimensions"]["CountriesAndTerritories"]["id"]
-        val_i = json_OBS["observations"][i]["observation"]
-        row = [mo, country_i, SITC, val_i]
-        data.append(row)
-else:
-    print("No observations found.")'''
 
-country_i = json_OBS["observations"][0]["dimensions"]["CountriesAndTerritories"]["id"]
-val_i = json_OBS["observations"][0]["observation"]
+for i in range(len(json_OBS["observations"])):
+    row = []
+    country_i = json_OBS["observations"][i]["dimensions"]["CountriesAndTerritories"]["id"]
+    val_i = json_OBS["observations"][i]["observation"]
+    row = [datetime.strptime(mo, '%b-%y'), country_i, dir, SITC, val_i]
+    data.append(row)
 
-data = {
-    'month': [mo],
-    'country': [country_i],
-    'sitc_code': [SITC],
-    'trade_value': [val_i]
-}
 
 # Create DataFrame
-df = pd.DataFrame(data , columns=['month', 'country', 'sitc_code', 'trade_value'])
+df = pd.DataFrame(data , columns=['trade_month', 'country_code', 'direction_code', 'sitc_code', 'trade_value'])
 
-client.insert_df('STG_ONS.dim_intl_trade', df, column_names=['month', 'country', 'sitc_code', 'trade_value'])
+client.insert_df('STG_ONS.dim_intl_trade', df, column_names=['trade_month', 'country_code', 'direction_code', 'sitc_code', 'trade_value'])
