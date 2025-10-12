@@ -1,4 +1,5 @@
 import clickhouse_connect
+from clickhouse_connect import get_client
 import requests
 import json
 import pandas as pd
@@ -11,7 +12,7 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s') 
 
 # Initialize ClickHouse client connection
-# client = clickhouse_connect.get_client(host='localhost', port=18123, username='default', password='changeme', database='STG_ONS')
+client = clickhouse_connect.get_client(host='localhost', port=18123, username='default', password='changeme', database='STG_ONS')
 logging.info("Connected to ClickHouse database.")
 
 #Get ONS Trade Data API
@@ -44,7 +45,7 @@ for i in range(len(json_OBS["observations"])):
     row = []
     country_i = json_OBS["observations"][i]["dimensions"]["CountriesAndTerritories"]["id"]
     val_i = json_OBS["observations"][i]["observation"]
-    row = [datetime.strptime(mo, '%b-%y'), country_i, dir, SITC, val_i]
+    row = [datetime.strptime(example_month, '%b-%y'), country_i, example_dir, example_SITC, val_i]
     data.append(row)
 
 
@@ -52,4 +53,3 @@ for i in range(len(json_OBS["observations"])):
 df = pd.DataFrame(data , columns=['trade_month', 'country_code', 'direction_code', 'sitc_code', 'trade_value'])
 
 client.insert_df('STG_ONS.dim_intl_trade', df, column_names=['trade_month', 'country_code', 'direction_code', 'sitc_code', 'trade_value'])
-'''
