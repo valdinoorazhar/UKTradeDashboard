@@ -12,19 +12,23 @@ def create_filter(version_number):
     filter_url = "https://api.beta.ons.gov.uk/v1/filters"
 
     payload = {
-            "datasets": {
+            "dataset": {
                 "id": "trade",
-                "editions": "time-series",
-                "versions": int(version_number)
+                "edition": "time-series",
+                "version": version_number
             },
             "dimensions": [
                 {
                     "name": "time",
-                    "options": "Oct-2025"
+                    "options": ["Oct-25"]
                 },
                 {
                     "name": "countriesandterritories",
-                    "options": "AT"
+                    "options": ["AT"]
+                },
+                {
+                    "name": "direction",
+                    "options": ["IM"]
                 }
             ]
     }
@@ -44,5 +48,5 @@ def create_filter(version_number):
         return None
     
 if __name__ == "__main__":
-    version_number = '63'
+    version_number = 65
     filter_id = create_filter(version_number)
