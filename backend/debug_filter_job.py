@@ -25,22 +25,21 @@ def create_filter(version_number):
                 {
                     "name": "countriesandterritories",
                     "options": ["AT"]
-                },
-                {
-                    "name": "direction",
-                    "options": ["IM"]
                 }
             ]
     }
 
 
     try:
-        response = requests.post(filter_url, json=payload)
+        response = requests.post(filter_url
+            , json=payload
+            , params={"submitted": "true"}
+        )
         response.raise_for_status()
         filter_data = response.json()
         filter_id = filter_data.get('filter_id')
         logger.info(f"Filter job created: {filter_id}")
-        return filter_id
+        return filter_data
 
     except requests.exceptions.RequestException as e:
         logger.error(f"Error creating filter job: {e}")
@@ -49,4 +48,6 @@ def create_filter(version_number):
     
 if __name__ == "__main__":
     version_number = 65
-    filter_id = create_filter(version_number)
+    filter_output = create_filter(version_number)
+    with open('filter_job_debug.txt', 'w') as txt_file:
+        txt_file.write(json.dumps(filter_output, indent=4))

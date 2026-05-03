@@ -1,0 +1,40 @@
+{
+    "dataset": {
+        "id": "trade",
+        "edition": "time-series",
+        "version": 65
+    },
+    "instance_id": "ade1b525-7448-4a1b-b1a6-e380e7454b0b",
+    "dimensions": [
+        {
+            "name": "time",
+            "options": [
+                "Oct-25"
+            ]
+        },
+        {
+            "name": "countriesandterritories",
+            "options": [
+                "AT"
+            ]
+        }
+    ],
+    "filter_id": "bcd724c6-a6e8-4b7b-879f-a3b5d3e85c75",
+    "published": true,
+    "links": {
+        "dimensions": {
+            "href": "http://10.30.157.120:10450/filters/bcd724c6-a6e8-4b7b-879f-a3b5d3e85c75/dimensions"
+        },
+        "filter_output": {
+            "id": "94764d16-5641-4cee-9511-5467c87eaa50",
+            "href": "http://10.30.157.120:10450/filter-outputs/94764d16-5641-4cee-9511-5467c87eaa50"
+        },
+        "self": {
+            "href": "http://10.30.157.120:10450/filters/bcd724c6-a6e8-4b7b-879f-a3b5d3e85c75"
+        },
+        "version": {
+            "id": "65",
+            "href": "http://10.30.156.22:10400/datasets/trade/editions/time-series/versions/65"
+        }
+    }
+}
