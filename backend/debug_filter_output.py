@@ -11,11 +11,16 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 def get_filter_output(filter_id):
-    output_url = f"https://api.beta.ons.gov.uk/v1/filters/{filter_id}"
+    output_url = f"https://api.beta.ons.gov.uk/v1/filter-outputs/{filter_id}"
     try:
-        response = requests.get(output_url)
+        response = requests.get(
+            url = output_url
+            #, params={"submitted": "true"}
+            #, data = json.dumps(payload)
+            ,# headers = {"If-Match": "*"}
+        )
         response.raise_for_status()
-        output_data = response.json()
+        output_data = json.loads(response.text)
         logger.info(f"Filter output retrieved for filter ID: {filter_id}")
         return output_data
 
@@ -25,5 +30,7 @@ def get_filter_output(filter_id):
         return None
     
 if __name__ == "__main__":
-    filter_id = 'f63bb50f-7cad-447a-9690-99a41abeaebb'
+    filter_id = '94764d16-5641-4cee-9511-5467c87eaa50'
     filter_output = get_filter_output(filter_id)
+    with open('filter_output_debug.txt', 'w') as txt_file:
+        txt_file.write(json.dumps(filter_output, indent=4))

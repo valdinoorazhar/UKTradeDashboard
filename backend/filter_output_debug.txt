@@ -1,0 +1,60 @@
+{
+    "id": "94764d16-5641-4cee-9511-5467c87eaa50",
+    "dataset": {
+        "id": "trade",
+        "edition": "time-series",
+        "version": 65
+    },
+    "instance_id": "ade1b525-7448-4a1b-b1a6-e380e7454b0b",
+    "dimensions": [
+        {
+            "name": "time",
+            "options": [
+                "Oct-25"
+            ]
+        },
+        {
+            "name": "countriesandterritories",
+            "options": [
+                "AT"
+            ]
+        }
+    ],
+    "downloads": {
+        "csv": {
+            "href": "https://download.ons.gov.uk/downloads/filter-outputs/94764d16-5641-4cee-9511-5467c87eaa50.csv",
+            "size": "26086"
+        },
+        "xls": {
+            "href": "https://download.ons.gov.uk/downloads/filter-outputs/94764d16-5641-4cee-9511-5467c87eaa50.xlsx",
+            "size": "13545"
+        }
+    },
+    "events": [
+        {
+            "type": "FilterOutputCreated",
+            "time": "2026-05-03T06:45:34.106Z"
+        },
+        {
+            "type": "FilterOutputCompleted",
+            "time": "2026-05-03T06:46:21.26Z"
+        }
+    ],
+    "filter_id": "94764d16-5641-4cee-9511-5467c87eaa50",
+    "state": "completed",
+    "published": true,
+    "links": {
+        "dimensions": {},
+        "filter_blueprint": {
+            "id": "bcd724c6-a6e8-4b7b-879f-a3b5d3e85c75",
+            "href": "https://api.beta.ons.gov.uk/v1/filters/bcd724c6-a6e8-4b7b-879f-a3b5d3e85c75"
+        },
+        "self": {
+            "href": "https://api.beta.ons.gov.uk/v1/filter-outputs/94764d16-5641-4cee-9511-5467c87eaa50"
+        },
+        "version": {
+            "id": "65",
+            "href": "https://api.beta.ons.gov.uk/v1/datasets/trade/editions/time-series/versions/65"
+        }
+    }
+}
