@@ -30,7 +30,7 @@ def get_filter_output(filter_id):
         return None
     
 if __name__ == "__main__":
-    filter_id = '94764d16-5641-4cee-9511-5467c87eaa50'
+    filter_id = 'ccdc9768-3a46-48af-ae5d-693dcbbfdb38'
     filter_output = get_filter_output(filter_id)
     with open('filter_output_debug.txt', 'w') as txt_file:
         txt_file.write(json.dumps(filter_output, indent=4))

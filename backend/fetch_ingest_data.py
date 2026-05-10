@@ -4,6 +4,7 @@ from clickhouse_driver import Client
 #from datetime import datetime
 import logging
 import time
+import json
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -88,6 +89,10 @@ class TradeDataPipeline:
             filter_id = filter_data.get('filter_id')
             filter_output_id = filter_data.get('links', {}).get('filter_output', {}).get('id')
             logger.info(f"Filter job created: {filter_id}")
+
+            #debug filter data
+            with open('debug_filter_data.txt', 'w') as txt_file:
+                txt_file.write(json.dumps(filter_data, indent=4))
             
             return filter_output_id  # Return filter_output_id for direct use in submission
         except requests.exceptions.RequestException as e:
@@ -176,14 +181,15 @@ class TradeDataPipeline:
             response = requests.get(url)
             response.raise_for_status()
             
-            output_data = response.json()
-            
-            # Extract CSV download URL
+            output_data = json.loads(response.text)
             downloads = output_data.get('downloads', {})
             csv_info = downloads.get('csv', {})
+            with open('debug_output_data.txt', 'w') as txt_file:
+                txt_file.write(json.dumps(output_data, indent=4))
             
-            # Try public URL first, then href
-            csv_url = csv_info.get('public') or csv_info.get('href')
+            
+            # csv url
+            csv_url = csv_info.get('href')
             
             if not csv_url:
                 logger.error("No CSV download URL found")
@@ -342,7 +348,7 @@ if __name__ == "__main__":
         clickhouse_password='changeme'
     )
 
-    target_month = 'Jan-24'  # or ['2024-01', '2024-02'] for multiple months
+    target_month = 'Dec-25'  # or ['2024-01', '2024-02'] for multiple months
     dataset_id = 'trade'
     edition = 'time-series'
     
@@ -370,6 +376,12 @@ if __name__ == "__main__":
     
     
     logger.info(f"Filter output ID: {filter_output_id}")
+
+    dataframe = pipeline.download_filter_results(filter_output_id)
+    #if not dataframe:
+    #    exit()
+
+    print(dataframe.head(10))
 
     # Run monthly batch - THIS IS THE MOST EFFICIENT WAY
     # It filters by month and automatically gets ALL combinations of:

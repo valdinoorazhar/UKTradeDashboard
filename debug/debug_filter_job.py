@@ -21,11 +21,8 @@ def create_filter(version_number):
                 {
                     "name": "time",
                     "options": ["Oct-25"]
-                },
-                {
-                    "name": "countriesandterritories",
-                    "options": ["AT"]
                 }
+                
             ]
     }
 

@@ -11,30 +11,24 @@
             "options": [
                 "Oct-25"
             ]
-        },
-        {
-            "name": "countriesandterritories",
-            "options": [
-                "AT"
-            ]
         }
     ],
-    "filter_id": "bcd724c6-a6e8-4b7b-879f-a3b5d3e85c75",
+    "filter_id": "739f37ad-d66a-4ee7-ae27-852745a2713b",
     "published": true,
     "links": {
         "dimensions": {
-            "href": "http://10.30.157.120:10450/filters/bcd724c6-a6e8-4b7b-879f-a3b5d3e85c75/dimensions"
+            "href": "http://10.30.156.82:10450/filters/739f37ad-d66a-4ee7-ae27-852745a2713b/dimensions"
         },
         "filter_output": {
-            "id": "94764d16-5641-4cee-9511-5467c87eaa50",
-            "href": "http://10.30.157.120:10450/filter-outputs/94764d16-5641-4cee-9511-5467c87eaa50"
+            "id": "ccdc9768-3a46-48af-ae5d-693dcbbfdb38",
+            "href": "http://10.30.156.82:10450/filter-outputs/ccdc9768-3a46-48af-ae5d-693dcbbfdb38"
         },
         "self": {
-            "href": "http://10.30.157.120:10450/filters/bcd724c6-a6e8-4b7b-879f-a3b5d3e85c75"
+            "href": "http://10.30.156.82:10450/filters/739f37ad-d66a-4ee7-ae27-852745a2713b"
         },
         "version": {
             "id": "65",
-            "href": "http://10.30.156.22:10400/datasets/trade/editions/time-series/versions/65"
+            "href": "http://10.30.157.22:10400/datasets/trade/editions/time-series/versions/65"
         }
     }
 }

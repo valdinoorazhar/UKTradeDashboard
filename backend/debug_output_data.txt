@@ -1,0 +1,44 @@
+{
+    "id": "3c0a91ca-c183-46a0-8bc7-fc225815793e",
+    "dataset": {
+        "id": "trade",
+        "edition": "time-series",
+        "version": 65
+    },
+    "instance_id": "ade1b525-7448-4a1b-b1a6-e380e7454b0b",
+    "dimensions": [
+        {
+            "name": "time",
+            "options": [
+                "Dec-25"
+            ]
+        }
+    ],
+    "downloads": {
+        "csv": {},
+        "xls": {}
+    },
+    "events": [
+        {
+            "type": "FilterOutputCreated",
+            "time": "2026-05-10T00:37:19.987Z"
+        }
+    ],
+    "filter_id": "3c0a91ca-c183-46a0-8bc7-fc225815793e",
+    "state": "created",
+    "published": true,
+    "links": {
+        "dimensions": {},
+        "filter_blueprint": {
+            "id": "f71bdcbd-1042-4db2-8208-206f51ebc239",
+            "href": "https://api.beta.ons.gov.uk/v1/filters/f71bdcbd-1042-4db2-8208-206f51ebc239"
+        },
+        "self": {
+            "href": "https://api.beta.ons.gov.uk/v1/filter-outputs/3c0a91ca-c183-46a0-8bc7-fc225815793e"
+        },
+        "version": {
+            "id": "65",
+            "href": "https://api.beta.ons.gov.uk/v1/datasets/trade/editions/time-series/versions/65"
+        }
+    }
+}
