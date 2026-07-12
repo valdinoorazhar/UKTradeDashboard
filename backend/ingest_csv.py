@@ -39,14 +39,3 @@ def download_csv(url, file_name, save_path):
     except Exception as e:
         logger.error(f"Error processing CSV: {e}")
         return None
-
-
-if __name__ == "__main__":
-    csv_url = "https://example.com/data.csv"
-    saved_path = download_csv(csv_url, "trade_data.csv", "../data")
-
-    if saved_path is not None:
-        print(f"CSV saved to: {saved_path}")
-    else:
-        print("Failed to download CSV")
-
