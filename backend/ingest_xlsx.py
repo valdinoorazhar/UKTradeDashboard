@@ -1,23 +1,22 @@
-import requests
 import logging
+import requests
 from pathlib import Path
-import csv
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
 
-def download_csv(url, file_name, save_path):
+def download_xlsx(url, file_name, save_path):
     """
-    Download a CSV file from a URL and save it locally.
+    Download a xlsx file from a URL and save it locally.
 
     Args:
-        url: URL of the CSV file to download
+        url: URL of the xlsx file to download
         file_name: Name of the file to save
         save_path: Folder where the file should be saved
 
     Returns:
-        str: Full path to the saved CSV file, or None if failed
+        str: Full path to the saved xlsx file, or None if failed
     """
     try:
         logger.info(f"Downloading from: {url}")
@@ -31,13 +30,13 @@ def download_csv(url, file_name, save_path):
         with open(f'{output_dir}/{file_name}', mode="wb") as file:
             file.write(response.content)  # Save the content of the response directly
 
-        logger.info(f"CSV saved to {output_dir}")
+        logger.info(f"xlsx saved to {output_dir}")
 
         return str(output_dir.resolve())
 
     except requests.exceptions.RequestException as e:
-        logger.error(f"Error downloading CSV: {e}")
+        logger.error(f"Error downloading xlsx: {e}")
         return None
     except Exception as e:
-        logger.error(f"Error processing CSV: {e}")
+        logger.error(f"Error processing xlsx: {e}")
         return None

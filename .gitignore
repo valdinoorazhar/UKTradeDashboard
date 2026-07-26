@@ -5,6 +5,7 @@
 
 # Debug artifacts
 /debug/
+/data/debug/
 
 # Python cache
 __pycache__/
