@@ -1,6 +1,7 @@
 import requests
 import logging
 from pathlib import Path
+import csv
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -27,11 +28,12 @@ def download_csv(url, file_name, save_path):
         output_dir = Path(save_path)
         output_dir.mkdir(parents=True, exist_ok=True)
 
-        output_path = output_dir / file_name
-        output_path.write_text(response.text, encoding='utf-8')
-        logger.info(f"CSV saved to {output_path}")
+        with open(f'{output_dir}/{file_name}', mode="wb") as file:
+            file.write(response.content)  # Save the content of the response directly
 
-        return str(output_path.resolve())
+        logger.info(f"CSV saved to {output_dir}")
+
+        return str(output_dir.resolve())
 
     except requests.exceptions.RequestException as e:
         logger.error(f"Error downloading CSV: {e}")

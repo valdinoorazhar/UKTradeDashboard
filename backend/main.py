@@ -1,8 +1,6 @@
 import os
 from pathlib import Path
-
 from dotenv import load_dotenv
-
 import ingest_csv
 
 load_dotenv(Path(__file__).resolve().parent.parent / ".env")
@@ -25,3 +23,8 @@ ingest_csv.download_csv(export_url, export_file_name, file_path)
 import_url = "https://www.ons.gov.uk/file?uri=/economy/nationalaccounts/balanceofpayments/datasets/uktradecountrybycommodityimports/current/countrybycommodityimports.xlsx"
 import_file_name = 'trade_import.csv'
 ingest_csv.download_csv(import_url, import_file_name, file_path)
+
+# Create DataFrame
+#df = pd.DataFrame(data , columns=['trade_month', 'country_code', 'direction_code', 'sitc_code', 'trade_value'])
+
+#client.insert_df('STG_ONS.dim_intl_trade', df, column_names=['trade_month', 'country_code', 'direction_code', 'sitc_code', 'trade_value'])
