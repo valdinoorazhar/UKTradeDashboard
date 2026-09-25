@@ -2,6 +2,7 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 import ingest_xlsx
+import add_latest_trade_value
 
 load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 
@@ -23,6 +24,9 @@ ingest_xlsx.download_xlsx(export_url, export_file_name, file_path)
 import_url = "https://www.ons.gov.uk/file?uri=/economy/nationalaccounts/balanceofpayments/datasets/uktradecountrybycommodityimports/current/countrybycommodityimports.xlsx"
 import_file_name = 'trade_import.xlsx'
 ingest_xlsx.download_xlsx(import_url, import_file_name, file_path)
+
+# Ingest the latest trade values into the database
+add_latest_trade_value.main()
 
 # Create DataFrame
 #df = pd.DataFrame(data , columns=['trade_month', 'country_code', 'direction_code', 'sitc_code', 'trade_value'])
