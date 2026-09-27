@@ -27,8 +27,3 @@ ingest_xlsx.download_xlsx(import_url, import_file_name, file_path)
 
 # Ingest the latest trade values into the database
 add_latest_trade_value.main()
-
-# Create DataFrame
-#df = pd.DataFrame(data , columns=['trade_month', 'country_code', 'direction_code', 'sitc_code', 'trade_value'])
-
-#client.insert_df('STG_ONS.dim_intl_trade', df, column_names=['trade_month', 'country_code', 'direction_code', 'sitc_code', 'trade_value'])
