@@ -3,6 +3,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 import ingest_xlsx
 import add_latest_trade_value
+import trd_staging_to_trd_dwh
 
 load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 
@@ -27,3 +28,6 @@ ingest_xlsx.download_xlsx(import_url, import_file_name, file_path)
 
 # Ingest the latest trade values into the database
 add_latest_trade_value.main()
+
+# Transform and load data from staging to DWH
+trd_staging_to_trd_dwh.main()

@@ -8,8 +8,9 @@ import logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-
+ROOT_DIR = Path(__file__).resolve().parent.parent
 from dotenv import load_dotenv
+load_dotenv(ROOT_DIR / ".env")
 
 from datetime import datetime
 
@@ -64,6 +65,26 @@ def insert_to_dwh (target_table, source_table, formatted_month, ori_date):
         ON splitByChar(' ',trd.Commodity) [1] = comm.detailed_sitc_code
     """
 
+    # Execute the queries
+    try:
+        logger.info(f"Deleting existing records for month {ori_date} from {target_table}...")
+        client.command(query_delete)
+        logger.info("Deletion completed.")
+
+        logger.info(f"Inserting new records for month {ori_date} into {target_table}...")
+        client.command(query_insert)
+        logger.info("Insertion completed.")
+    except Exception as e:
+        logger.error(f"An error occurred: {e}")
+
+def main() -> None:
+    date_input = input("Enter a date (YYYY-MM-DD): ")
+    formatted_month, ori_date = input_month(date_input)
+    if formatted_month and ori_date:
+        insert_to_dwh("TRADE_DWH.fact_trade", "TRADE_STAGING.trade", formatted_month, ori_date)
+
+if __name__ == "__main__":
+    main()
 
 
     
