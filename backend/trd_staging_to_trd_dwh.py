@@ -16,7 +16,6 @@ from datetime import datetime
 
 MONTH_PATTERN = re.compile(r"^(\d{4})(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)$")
 
-date_input = input("Enter a date (YYYY-MM-DD): ")
 
 def input_month(month_input):
     try:
@@ -47,11 +46,13 @@ def insert_to_dwh (target_table, source_table, formatted_month, ori_date):
         database=os.getenv("DB_NAME"),
     )
 
-    query_delete = f"DELETE FROM {target_table} WHERE month = '{ori_date}'"
+    month_date = ori_date.date().isoformat()
+    trade_month = f"toDate32('{month_date}')"
+    query_delete = f"DELETE FROM {target_table} WHERE trade_month = {trade_month}"
 
     query_insert = f"""
     INSERT INTO {target_table}  
-    SELECT {ori_date} as trade_month
+    SELECT {trade_month} as trade_month
         , ctr.country_code as country_code
         , dir.direction_code as direction_code
         , comm.detailed_sitc_code as sitc_code
@@ -81,7 +82,7 @@ def main() -> None:
     date_input = input("Enter a date (YYYY-MM-DD): ")
     formatted_month, ori_date = input_month(date_input)
     if formatted_month and ori_date:
-        insert_to_dwh("TRADE_DWH.fact_trade", "TRADE_STAGING.trade", formatted_month, ori_date)
+        insert_to_dwh("TRADE_DWH.dim_intl_trade", "TRADE_STAGING.trade", formatted_month, ori_date)
 
 if __name__ == "__main__":
     main()
