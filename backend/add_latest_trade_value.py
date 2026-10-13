@@ -6,6 +6,8 @@ import clickhouse_connect
 import pandas as pd
 from dotenv import load_dotenv
 
+import datetime
+
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT_DIR / "data"
@@ -41,7 +43,7 @@ def read_latest_month(workbook: Path, sheet_name: str) -> tuple[str, pd.DataFram
 
 
     '''Read the latest month column'''
-    latest_month = max(month_columns, key=lambda column: (int(column[:4]), column[4:]))
+    latest_month = max(month_columns, key=lambda column: (datetime.datetime.strptime(column, "%Y%b")))
     result = frame[["COMMODITY", "COUNTRY", "DIRECTION", latest_month]].copy()
     result = result.rename(
         columns={
