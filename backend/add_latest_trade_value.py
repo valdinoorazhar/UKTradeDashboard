@@ -113,7 +113,7 @@ def update_values(client, month: str, values: pd.DataFrame, batch_size: int = 50
         logger.info(f"Updated batch {start // batch_size + 1} for month {month}.")
 
 
-def main(arg) -> None:
+def main(month_input, workbook, sheet) -> None:
     client = clickhouse_connect.get_client(
         host=os.getenv("DB_HOST", "localhost"),
         port=int(os.getenv("DB_PORT", "18123")),
@@ -122,20 +122,16 @@ def main(arg) -> None:
         database=os.getenv("DB_NAME", "TRADE_STAGING"),
     )
 
-    # Set the month_input based on the argument passed to the script
-    month_input = arg
-
-    for direction, sheet_name in (("import", "3. Monthly Imports"), ("export", "3. Monthly Exports")):
-        workbook = DATA_DIR / f"trade_{direction}.xlsx"
-        month, values = read_latest_month(workbook, sheet_name, month_input)
-        update_values(client, month, values)
-        logger.info(f"Updated {len(values)} {direction} rows for {month}.")
+    workbook = DATA_DIR / workbook
+    month, values = read_latest_month(workbook, sheet, month_input)
+    update_values(client, month, values)
+    logger.info(f"Updated {len(values)} rows in {TABLE} from {workbook} rows for {month}.")
 
 
 if __name__ == "__main__":
     # Check if the user passed any arguments
     if len(sys.argv) > 1:
         # Pass all arguments except the script name itself
-        main(sys.argv[1])
+        main(sys.argv[1:])
     else:
         logger.warning("No arguments were provided!")

@@ -26,8 +26,14 @@ import_url = "https://www.ons.gov.uk/file?uri=/economy/nationalaccounts/balanceo
 import_file_name = 'trade_import.xlsx'
 ingest_xlsx.download_xlsx(import_url, import_file_name, file_path)
 
+# Input
+month_input = input("Enter the month in YYYY-MM-DD format or type 'latest' to use the latest month: ")
+
 # Ingest the latest trade values into the database
-add_latest_trade_value.main()
+# Update or insert the chosen month values into the staging table from the XLSX files for export data
+add_latest_trade_value.main(month_input, export_file_name, '3. Monthly exports')
+# Update or insert the chosen month values into the staging table from the XLSX files for import data
+add_latest_trade_value.main(month_input, import_file_name, '3. Monthly imports')
 
 # Transform and load data from staging to DWH
 trd_staging_to_trd_dwh.main()
