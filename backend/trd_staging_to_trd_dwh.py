@@ -1,3 +1,4 @@
+import sys
 import os
 import re
 from pathlib import Path
@@ -15,37 +16,44 @@ load_dotenv(ROOT_DIR / ".env")
 from datetime import datetime
 
 MONTH_PATTERN = re.compile(r"^(\d{4})(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)$")
+SOURCE_TABLE = "TRADE_STAGING.trade"
+TARGET_TABLE = "TRADE_DWH.dim_intl_trade"
+
+# Connect to ClickHouse
+client = clickhouse_connect.get_client(
+    host=os.getenv("DB_HOST"),
+    port=int(os.getenv("DB_PORT")),
+    username=os.getenv("DB_USER"),
+    password=os.getenv("DB_PASSWORD"),
+    database=os.getenv("DB_NAME"),
+)
 
 
-def input_month(month_input):
-    try:
-        # Parse the input date
-        ori_date = datetime.strptime(month_input, "%Y-%m-%d")
-        # Format the date to YYYYMON
-        formatted_month = ori_date.strftime("%Y%b").upper()
+def input_month(month_input, source_table):
+    if month_input.lower() == 'latest':
+        get_month = f"SHOW COLUMNS FROM {source_table}"
+        list_month = client.query(get_month).result_rows
+        month_columns = [row[0] for row in list_month if MONTH_PATTERN.fullmatch(row[0])]
+
+        formatted_month = max(month_columns, key=lambda column: datetime.strptime(column, "%Y%b"))
+        ori_date = datetime.strptime(formatted_month, "%Y%b")
+        
         return formatted_month, ori_date
-    except ValueError:
-        logger.error("Invalid date format. Please enter a date in YYYY-MM-DD format.")
-        return None
+    
+    else:
+        try:
+            # Parse the input date
+            ori_date = datetime.strptime(month_input, "%Y-%m-%d")
+            # Format the date to YYYYMON
+            formatted_month = ori_date.strftime("%Y%b").upper()
+            return formatted_month, ori_date
+        except ValueError:
+            logger.error("Invalid date format. Please enter a date in YYYY-MM-DD format.")
+            return None
 
-#formatted_month, ori_date = input_month(date_input)
+
 
 def insert_to_dwh (target_table, source_table, formatted_month, ori_date):
-    ROOT_DIR = Path(__file__).resolve().parent.parent
-    DATA_DIR = ROOT_DIR / "data"
-    TABLE = "TRADE_STAGING.trade"
-
-    load_dotenv(ROOT_DIR / ".env")
-
-    # Connect to ClickHouse
-    client = clickhouse_connect.get_client(
-        host=os.getenv("DB_HOST"),
-        port=int(os.getenv("DB_PORT")),
-        username=os.getenv("DB_USER"),
-        password=os.getenv("DB_PASSWORD"),
-        database=os.getenv("DB_NAME"),
-    )
-
     month_date = ori_date.date().isoformat()
     trade_month = f"toDate32('{month_date}')"
     query_delete = f"DELETE FROM {target_table} WHERE trade_month = {trade_month}"
@@ -68,7 +76,7 @@ def insert_to_dwh (target_table, source_table, formatted_month, ori_date):
 
     # Execute the queries
     try:
-        logger.info(f"Deleting existing records for month {ori_date} from {target_table}...")
+        logger.info(f"Deleting existing records for month {ori_date} from {target_table} if exists")
         client.command(query_delete)
         logger.info("Deletion completed.")
 
@@ -78,14 +86,19 @@ def insert_to_dwh (target_table, source_table, formatted_month, ori_date):
     except Exception as e:
         logger.error(f"An error occurred: {e}")
 
-def main() -> None:
-    date_input = input("Enter a date (YYYY-MM-DD): ")
-    formatted_month, ori_date = input_month(date_input)
+def main(arg) -> None:
+    date_input = arg
+    formatted_month, ori_date = input_month(date_input, SOURCE_TABLE)
     if formatted_month and ori_date:
-        insert_to_dwh("TRADE_DWH.dim_intl_trade", "TRADE_STAGING.trade", formatted_month, ori_date)
+        insert_to_dwh(TARGET_TABLE, SOURCE_TABLE, formatted_month, ori_date)
 
 if __name__ == "__main__":
-    main()
+    # Check if the user passed any arguments
+    if len(sys.argv) > 1:
+        # Pass all arguments except the script name itself
+        main(sys.argv[1])
+    else:
+        logger.warning("No arguments were provided!")
 
 
     

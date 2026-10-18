@@ -5,14 +5,6 @@ import ingest_xlsx
 import add_latest_trade_value
 import trd_staging_to_trd_dwh
 
-load_dotenv(Path(__file__).resolve().parent.parent / ".env")
-
-DB_HOST = os.getenv("DB_HOST")
-DB_PORT = os.getenv("DB_PORT")
-DB_NAME = os.getenv("DB_NAME")
-DB_USER = os.getenv("DB_USER")
-DB_PASSWORD = os.getenv("DB_PASSWORD")
-
 # Declare file path
 file_path = '../data'
 
@@ -36,4 +28,4 @@ add_latest_trade_value.main(month_input, export_file_name, '3. Monthly exports')
 add_latest_trade_value.main(month_input, import_file_name, '3. Monthly imports')
 
 # Transform and load data from staging to DWH
-trd_staging_to_trd_dwh.main()
+trd_staging_to_trd_dwh.main(month_input)
