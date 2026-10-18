@@ -1,8 +1,5 @@
-import os
-from pathlib import Path
-from dotenv import load_dotenv
-import ingest_xlsx
 import add_latest_trade_value
+import ingest_xlsx
 import trd_staging_to_trd_dwh
 
 # Declare file path
