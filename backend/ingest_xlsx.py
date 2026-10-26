@@ -36,7 +36,7 @@ def download_xlsx(url, file_name, save_path):
 
     except requests.exceptions.RequestException as e:
         logger.error(f"Error downloading xlsx: {e}")
-        return None
+        raise
     except Exception as e:
         logger.error(f"Error processing xlsx: {e}")
-        return None
+        raise
