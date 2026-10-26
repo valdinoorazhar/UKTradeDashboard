@@ -19,17 +19,9 @@ MONTH_PATTERN = re.compile(r"^(\d{4})(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NO
 SOURCE_TABLE = "TRADE_STAGING.trade"
 TARGET_TABLE = "TRADE_DWH.dim_intl_trade"
 
-# Connect to ClickHouse
-client = clickhouse_connect.get_client(
-    host=os.getenv("DB_HOST"),
-    port=int(os.getenv("DB_PORT")),
-    username=os.getenv("DB_USER"),
-    password=os.getenv("DB_PASSWORD"),
-    database=os.getenv("DB_NAME"),
-)
 
 
-def input_month(month_input, source_table):
+def input_month(client, month_input, source_table):
     if month_input.lower() == 'latest':
         get_month = f"SHOW COLUMNS FROM {source_table}"
         list_month = client.query(get_month).result_rows
@@ -49,11 +41,10 @@ def input_month(month_input, source_table):
             return formatted_month, ori_date
         except ValueError:
             logger.error("Invalid date format. Please enter a date in YYYY-MM-DD format.")
-            return None
+            raise
 
 
-
-def insert_to_dwh (target_table, source_table, formatted_month, ori_date):
+def insert_to_dwh (client, target_table, source_table, formatted_month, ori_date):
     month_date = ori_date.date().isoformat()
     trade_month = f"toDate32('{month_date}')"
     query_delete = f"DELETE FROM {target_table} WHERE trade_month = {trade_month}"
@@ -85,12 +76,26 @@ def insert_to_dwh (target_table, source_table, formatted_month, ori_date):
         logger.info("Insertion completed.")
     except Exception as e:
         logger.error(f"An error occurred: {e}")
+        raise
 
 def main(arg) -> None:
+    # Connect to ClickHouse
+    try:
+        client = clickhouse_connect.get_client(
+            host=os.getenv("DB_HOST"),
+            port=int(os.getenv("DB_PORT")),
+            username=os.getenv("DB_USER"),
+            password=os.getenv("DB_PASSWORD"),
+            database=os.getenv("DB_NAME"),
+        )
+    except Exception as e:
+        logger.error(f"Failed to connect to ClickHouse: {e}")
+        raise
+
     date_input = arg
-    formatted_month, ori_date = input_month(date_input, SOURCE_TABLE)
+    formatted_month, ori_date = input_month(client, date_input, SOURCE_TABLE)
     if formatted_month and ori_date:
-        insert_to_dwh(TARGET_TABLE, SOURCE_TABLE, formatted_month, ori_date)
+        insert_to_dwh(client, TARGET_TABLE, SOURCE_TABLE, formatted_month, ori_date)
 
 if __name__ == "__main__":
     # Check if the user passed any arguments
