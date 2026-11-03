@@ -1,0 +1,1296 @@
+{
+    "@context": "https://cdn.ons.gov.uk/assets/json-ld/context.json",
+    "dimensions": {
+      "countriesandterritories": {
+        "option": {
+          "href": "https://api.beta.ons.gov.uk/v1/code-lists/countries-and-territories/codes/AT",
+          "id": "AT"
+        }
+      },
+      "direction": {
+        "option": {
+          "href": "https://api.beta.ons.gov.uk/v1/code-lists/trade-direction/codes/IM",
+          "id": "IM"
+        }
+      },
+      "geography": {
+        "option": {
+          "href": "https://api.beta.ons.gov.uk/v1/code-lists/uk-only/codes/K02000001",
+          "id": "K02000001"
+        }
+      },
+      "time": {
+        "option": {
+          "href": "https://api.beta.ons.gov.uk/v1/code-lists/mmm-yy/codes/Nov-22",
+          "id": "Nov-22"
+        }
+      }
+    },
+    "limit": 10000,
+    "links": {
+      "dataset_metadata": {
+        "href": "https://api.beta.ons.gov.uk/v1/metadata"
+      },
+      "self": {
+        "href": "https://api.beta.ons.gov.uk/v1/datasets/trade/editions/time-series/versions//observations?countriesandterritories=AT&direction=IM&geography=K02000001&standardindustrialtradeclassification=*&time=Nov-22"
+      },
+      "version": {
+        "href": "https://api.beta.ons.gov.uk/v1"
+      }
+    },
+    "observations": [
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/42",
+            "id": "42",
+            "label": "42: Vegetable oils & fats"
+          }
+        },
+        "observation": "0.06"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/27",
+            "id": "27",
+            "label": "27: Crude minerals & fertilisers"
+          }
+        },
+        "observation": "0.11"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/78M",
+            "id": "78M",
+            "label": "78M: Cars"
+          }
+        },
+        "observation": "23.19"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/62",
+            "id": "62",
+            "label": "62: Rubber manufactures"
+          }
+        },
+        "observation": "1.96"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/73I",
+            "id": "73I",
+            "label": "73I: Metal working machinery (intermediate)"
+          }
+        },
+        "observation": "1.32"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/84",
+            "id": "84",
+            "label": "84: Clothing"
+          }
+        },
+        "observation": "1.44"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/59",
+            "id": "59",
+            "label": "59: Other chemicals"
+          }
+        },
+        "observation": "2.61"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/33",
+            "id": "33",
+            "label": "33: Oil"
+          }
+        },
+        "observation": "0.5"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/75C",
+            "id": "75C",
+            "label": "75C: Office machinery (consumer)"
+          }
+        },
+        "observation": "0"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/71MC",
+            "id": "71MC",
+            "label": "71MC: Mechanical power generators (consumer)"
+          }
+        },
+        "observation": "0"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/87C",
+            "id": "87C",
+            "label": "87C: Scientific instruments (consumer)"
+          }
+        },
+        "observation": "0.27"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/07",
+            "id": "07",
+            "label": "07: Coffee, tea, cocoa etc"
+          }
+        },
+        "observation": "1.06"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/73K",
+            "id": "73K",
+            "label": "73K: Metal working machinery (capital)"
+          }
+        },
+        "observation": "3.06"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/8OK",
+            "id": "8OK",
+            "label": "8OK: Other miscellaneous manufactures (capital)"
+          }
+        },
+        "observation": "2.58"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/74I",
+            "id": "74I",
+            "label": "74I: General industrial machinery (intermediate)"
+          }
+        },
+        "observation": "6.15"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/00",
+            "id": "00",
+            "label": "00: Live animals"
+          }
+        },
+        "observation": "0"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/64",
+            "id": "64",
+            "label": "64: Paper & paperboard"
+          }
+        },
+        "observation": "11.86"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/71EI",
+            "id": "71EI",
+            "label": "71EI: Electric motors (intermediate)"
+          }
+        },
+        "observation": "0.04"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/58",
+            "id": "58",
+            "label": "58: Plastics in non-primary forms"
+          }
+        },
+        "observation": "3.68"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/79",
+            "id": "79",
+            "label": "79: Other transport equipment"
+          }
+        },
+        "observation": "4.75"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/5",
+            "id": "5",
+            "label": "5: Chemicals"
+          }
+        },
+        "observation": "30.34"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/25",
+            "id": "25",
+            "label": "25: Pulp & waste paper"
+          }
+        },
+        "observation": "0.11"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/66",
+            "id": "66",
+            "label": "66: Mineral manufactures"
+          }
+        },
+        "observation": "6.06"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/6",
+            "id": "6",
+            "label": "6: Material manufactures"
+          }
+        },
+        "observation": "64.65"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/43",
+            "id": "43",
+            "label": "43: Processed oils & fats"
+          }
+        },
+        "observation": "0.03"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/22",
+            "id": "22",
+            "label": "22: Oil-seeds & oleaginous fruits"
+          }
+        },
+        "observation": "0.11"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/0",
+            "id": "0",
+            "label": "0: Food & live animals"
+          }
+        },
+        "observation": "14.8"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/68",
+            "id": "68",
+            "label": "68: Non-ferrous metals"
+          }
+        },
+        "observation": "8.06"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/26",
+            "id": "26",
+            "label": "26: Textile fibres"
+          }
+        },
+        "observation": "0.29"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/41",
+            "id": "41",
+            "label": "41: Animal oils & fats"
+          }
+        },
+        "observation": "0"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/72C",
+            "id": "72C",
+            "label": "72C: Specialised machinery (consumer)"
+          }
+        },
+        "observation": "0.29"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/896",
+            "id": "896",
+            "label": "896: Works of art"
+          }
+        },
+        "observation": "0.72"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/4",
+            "id": "4",
+            "label": "4: Animal & vegetable oils & fats"
+          }
+        },
+        "observation": "0.09"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/1",
+            "id": "1",
+            "label": "1: Beverages & tobacco"
+          }
+        },
+        "observation": "1.47"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/77I",
+            "id": "77I",
+            "label": "77I: Miscellaneous electrical goods (intermediate)"
+          }
+        },
+        "observation": "24.35"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/88C",
+            "id": "88C",
+            "label": "88C: Photographic & optical goods & clocks (consumer)"
+          }
+        },
+        "observation": "0.2"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/82I",
+            "id": "82I",
+            "label": "82I: Furniture (intermediate)"
+          }
+        },
+        "observation": "0.14"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/793",
+            "id": "793",
+            "label": "793: Ships"
+          }
+        },
+        "observation": "0.02"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/81I",
+            "id": "81I",
+            "label": "81I: Plumbing, heating & lighting fixtures (intermediate)"
+          }
+        },
+        "observation": "4.91"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/06",
+            "id": "06",
+            "label": "06: Sugar"
+          }
+        },
+        "observation": "0.13"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/03",
+            "id": "03",
+            "label": "03: Fish & shellfish"
+          }
+        },
+        "observation": "0"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/53",
+            "id": "53",
+            "label": "53: Dyeing, tanning & colouring materials"
+          }
+        },
+        "observation": "1.35"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/791K",
+            "id": "791K",
+            "label": "791K: Railway equipment (capital)"
+          }
+        },
+        "observation": "0"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/78I",
+            "id": "78I",
+            "label": "78I: Road vehicles other than cars (intermediate)"
+          }
+        },
+        "observation": "7.54"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/7",
+            "id": "7",
+            "label": "7: Machinery & transport equipment"
+          }
+        },
+        "observation": "162.58"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/78C",
+            "id": "78C",
+            "label": "78C: Road vehicles other than cars (consumer)"
+          }
+        },
+        "observation": "7.52"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/75I",
+            "id": "75I",
+            "label": "75I: Office machinery (intermediate)"
+          }
+        },
+        "observation": "0.64"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/82K",
+            "id": "82K",
+            "label": "82K: Furniture (capital)"
+          }
+        },
+        "observation": "0.37"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/82C",
+            "id": "82C",
+            "label": "82C: Furniture (consumer)"
+          }
+        },
+        "observation": "1.36"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/21",
+            "id": "21",
+            "label": "21: Hides, skins & furskins"
+          }
+        },
+        "observation": "0"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/74C",
+            "id": "74C",
+            "label": "74C: General industrial machinery (consumer)"
+          }
+        },
+        "observation": "0"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/89K",
+            "id": "89K",
+            "label": "89K: Other manufactures (capital)"
+          }
+        },
+        "observation": "0.92"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/54",
+            "id": "54",
+            "label": "54: Medicinal & pharmaceutical products"
+          }
+        },
+        "observation": "11"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/29",
+            "id": "29",
+            "label": "29: Other crude animal & vegetable materials"
+          }
+        },
+        "observation": "0.21"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/3OF",
+            "id": "3OF",
+            "label": "3OF: Fuels other than oil"
+          }
+        },
+        "observation": "0.04"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/76K",
+            "id": "76K",
+            "label": "76K: Telecoms & sound equipment (capital)"
+          }
+        },
+        "observation": "6.35"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/7EC",
+            "id": "7EC",
+            "label": "7EC: Electrical machinery (consumer)"
+          }
+        },
+        "observation": "0.66"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/87I",
+            "id": "87I",
+            "label": "87I: Scientific instruments (intermediate)"
+          }
+        },
+        "observation": "1.46"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/7EI",
+            "id": "7EI",
+            "label": "7EI: Electrical machinery (intermediate)"
+          }
+        },
+        "observation": "25.99"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/792",
+            "id": "792",
+            "label": "792: Aircraft"
+          }
+        },
+        "observation": "4.48"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/88I",
+            "id": "88I",
+            "label": "88I: Photographic & optical goods & clocks (intermediate)"
+          }
+        },
+        "observation": "0.14"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/28",
+            "id": "28",
+            "label": "28: Metal ores & scrap"
+          }
+        },
+        "observation": "3.7"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/77C",
+            "id": "77C",
+            "label": "77C: Miscellaneous electrical goods (consumer)"
+          }
+        },
+        "observation": "0.52"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/83",
+            "id": "83",
+            "label": "83: Travel goods, handbags etc"
+          }
+        },
+        "observation": "0.13"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/51",
+            "id": "51",
+            "label": "51: Organic chemicals"
+          }
+        },
+        "observation": "4.36"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/72K",
+            "id": "72K",
+            "label": "72K: Specialised machinery (capital)"
+          }
+        },
+        "observation": "21.46"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/67",
+            "id": "67",
+            "label": "67: Iron & steel"
+          }
+        },
+        "observation": "5.86"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/89I",
+            "id": "89I",
+            "label": "89I: Other manufactures (intermediate)"
+          }
+        },
+        "observation": "2.83"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/7EK",
+            "id": "7EK",
+            "label": "7EK: Electrical machinery (intermediate)"
+          }
+        },
+        "observation": "26.74"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/04",
+            "id": "04",
+            "label": "04: Cereals"
+          }
+        },
+        "observation": "3.1"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/05",
+            "id": "05",
+            "label": "05: Vegetables & fruit"
+          }
+        },
+        "observation": "2.36"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/77K",
+            "id": "77K",
+            "label": "77K: Miscellaneous electrical goods (capital)"
+          }
+        },
+        "observation": "12.84"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/08",
+            "id": "08",
+            "label": "08: Animal feeding stuffs"
+          }
+        },
+        "observation": "4.3"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/897C",
+            "id": "897C",
+            "label": "897C: Jewellery"
+          }
+        },
+        "observation": "0.37"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/57",
+            "id": "57",
+            "label": "57: Plastics in primary forms"
+          }
+        },
+        "observation": "4.46"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/52",
+            "id": "52",
+            "label": "52: Inorganic chemicals"
+          }
+        },
+        "observation": "0.34"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/791I",
+            "id": "791I",
+            "label": "791I: Road vehicles other than cars (intermediate)"
+          }
+        },
+        "observation": "0.25"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/61",
+            "id": "61",
+            "label": "61: Leather manufactures"
+          }
+        },
+        "observation": "0.05"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/87K",
+            "id": "87K",
+            "label": "87K: Scientific instruments (capital)"
+          }
+        },
+        "observation": "7.39"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/63",
+            "id": "63",
+            "label": "63: Wood & cork manufactures"
+          }
+        },
+        "observation": "4.92"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/7MK",
+            "id": "7MK",
+            "label": "7MK: Mechanical machinery (capital)"
+          }
+        },
+        "observation": "41.33"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/01",
+            "id": "01",
+            "label": "01: Meat & meat preparations"
+          }
+        },
+        "observation": "0.97"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/65",
+            "id": "65",
+            "label": "65: Textile fabrics"
+          }
+        },
+        "observation": "5.28"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/33R",
+            "id": "33R",
+            "label": "33R: Refined oil"
+          }
+        },
+        "observation": "0.5"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/78K",
+            "id": "78K",
+            "label": "78K: Road vehicles other than cars (capital)"
+          }
+        },
+        "observation": "6.23"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/71MI",
+            "id": "71MI",
+            "label": "71MI: Mechanical power generators (intermediate)"
+          }
+        },
+        "observation": "6.83"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/55",
+            "id": "55",
+            "label": "55: Toilet & cleansing preparations"
+          }
+        },
+        "observation": "2.33"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/78",
+            "id": "78",
+            "label": "78: Road vehicles"
+          }
+        },
+        "observation": "44.48"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/33O",
+            "id": "33O",
+            "label": "33O: Crude oil"
+          }
+        },
+        "observation": "0"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/89OC",
+            "id": "89OC",
+            "label": "89OC: Other manufactures (consumer)"
+          }
+        },
+        "observation": "13.96"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/2",
+            "id": "2",
+            "label": "2: Crude materials"
+          }
+        },
+        "observation": "5.03"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/34",
+            "id": "34",
+            "label": "34: Gas"
+          }
+        },
+        "observation": "0.04"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/8OI",
+            "id": "8OI",
+            "label": "8OI: Other miscellaneous manufactures (intermediate)"
+          }
+        },
+        "observation": "7.88"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/32",
+            "id": "32",
+            "label": "32: Coal, coke & briquettes"
+          }
+        },
+        "observation": "0"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/11",
+            "id": "11",
+            "label": "11: Beverages"
+          }
+        },
+        "observation": "1.46"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/56",
+            "id": "56",
+            "label": "56: Processed fertilisers"
+          }
+        },
+        "observation": "0.21"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/72I",
+            "id": "72I",
+            "label": "72I: Specialised machinery (intermediate)"
+          }
+        },
+        "observation": "4.04"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/88K",
+            "id": "88K",
+            "label": "88K: Photographic & optical goods & clocks (capital)"
+          }
+        },
+        "observation": "0.03"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/71MK",
+            "id": "71MK",
+            "label": "71MK: Mechanical power generators (capital)"
+          }
+        },
+        "observation": "3.86"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/24",
+            "id": "24",
+            "label": "24: Wood & cork"
+          }
+        },
+        "observation": "0.5"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/76C",
+            "id": "76C",
+            "label": "76C: Telecoms & sound equipment (consumer)"
+          }
+        },
+        "observation": "0.14"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/76I",
+            "id": "76I",
+            "label": "76I: Telecoms & sound equipment (intermediate)"
+          }
+        },
+        "observation": "0.96"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/T",
+            "id": "T",
+            "label": "T: Total"
+          }
+        },
+        "observation": "322"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/71EK",
+            "id": "71EK",
+            "label": "71EK: Electric motors (capital)"
+          }
+        },
+        "observation": "4.35"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/8O",
+            "id": "8O",
+            "label": "8O: Other manufactures"
+          }
+        },
+        "observation": "27.01"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/7MC",
+            "id": "7MC",
+            "label": "7MC: Mechanical machinery (consumer)"
+          }
+        },
+        "observation": "0.29"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/35",
+            "id": "35",
+            "label": "35: Electricity"
+          }
+        },
+        "observation": "0"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/81K",
+            "id": "81K",
+            "label": "81K: Plumbing, heating & lighting fixtures (capital)"
+          }
+        },
+        "observation": "1.29"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/75K",
+            "id": "75K",
+            "label": "75K: Office machinery (capital)"
+          }
+        },
+        "observation": "3.2"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/69",
+            "id": "69",
+            "label": "69: Miscellaneous metal manufactures"
+          }
+        },
+        "observation": "20.6"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/7M",
+            "id": "7M",
+            "label": "7M: Mechanical machinery"
+          }
+        },
+        "observation": "59.96"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/85",
+            "id": "85",
+            "label": "85: Footwear"
+          }
+        },
+        "observation": "1.04"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/8",
+            "id": "8",
+            "label": "8: Miscellaneous manufactures"
+          }
+        },
+        "observation": "38.98"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/8OC",
+            "id": "8OC",
+            "label": "8OC: Other miscellaneous manufactures (consumer)"
+          }
+        },
+        "observation": "15.46"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/12",
+            "id": "12",
+            "label": "12: Tobacco"
+          }
+        },
+        "observation": "0.01"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/3",
+            "id": "3",
+            "label": "3: Fuels"
+          }
+        },
+        "observation": "0.54"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/7E",
+            "id": "7E",
+            "label": "7E: Electrical machinery"
+          }
+        },
+        "observation": "53.39"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/74K",
+            "id": "74K",
+            "label": "74K: General industrial machinery (capital)"
+          }
+        },
+        "observation": "12.95"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/792-3",
+            "id": "792-3",
+            "label": "792-3: Ships & aircraft"
+          }
+        },
+        "observation": "4.5"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/81C",
+            "id": "81C",
+            "label": "81C: Plumbing, heating & lighting fixtures (consumer)"
+          }
+        },
+        "observation": "0.01"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/9",
+            "id": "9",
+            "label": "9: Unspecified goods"
+          }
+        },
+        "observation": "3.59"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/09",
+            "id": "09",
+            "label": "09: Miscellaneous foods"
+          }
+        },
+        "observation": "1.61"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/23",
+            "id": "23",
+            "label": "23: Crude rubber"
+          }
+        },
+        "observation": "0"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/7MI",
+            "id": "7MI",
+            "label": "7MI: Mechanical machinery (intermediate)"
+          }
+        },
+        "observation": "18.34"
+      },
+      {
+        "dimensions": {
+          "StandardIndustrialTradeClassification": {
+            "href": "https://api.beta.ons.gov.uk/v1/code-lists/sitc/codes/02",
+            "id": "02",
+            "label": "02: Dairy products & eggs"
+          }
+        },
+        "observation": "1.27"
+      }
+    ],
+    "offset": 0,
+    "total_observations": 125,
+    "unit_of_measure": "£million"
+  }
