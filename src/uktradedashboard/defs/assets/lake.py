@@ -2,7 +2,7 @@ import dagster as dg
 import logging
 from pathlib import Path
 import requests
-import constants
+from uktradedashboard.defs.assets import constants
 
 
 
