@@ -3,6 +3,10 @@
 .env.*
 !.env.example
 
+# tmp folders
+*.tmp
+.tmp_dagster_home_ot712br8/
+
 # Debug artifacts
 /debug/
 /data/debug/
