@@ -5,7 +5,7 @@
 
 # tmp folders
 *.tmp
-.tmp_dagster_home_ot712br8/
+.tmp*
 
 # Debug artifacts
 /debug/
